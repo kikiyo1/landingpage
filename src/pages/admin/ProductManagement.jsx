@@ -272,6 +272,16 @@ const ProductManagement = () => {
                   <Label htmlFor="features">Fitur (pisahkan dengan koma)</Label>
                   <Input id="features" name="features" defaultValue={defaultValues.features} placeholder="Fitur 1, Fitur 2,..." />
                 </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="checkoutUrl">Checkout URL</Label>
+                  <Input
+                    id="checkoutUrl"
+                    name="checkoutUrl"
+                    defaultValue={editingProduct?.checkoutUrl || ""}
+                    placeholder="https://..."
+                  />
+                </div>
+
               </div>
             </div>
             <DialogFooter>
