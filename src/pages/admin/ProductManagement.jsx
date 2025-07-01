@@ -234,6 +234,18 @@ const ProductManagement = () => {
                   <Label htmlFor="name">Nama</Label>
                   <Input id="name" name="name" defaultValue={defaultValues.name} required />
                 </div>
+          <div className="space-y-2">
+            <Label htmlFor="checkoutUrl">Checkout URL</Label>
+            <Input
+              id="checkoutUrl"
+              type="text"
+              value={editingProduct?.checkoutUrl || ""}
+              onChange={(e) =>
+                setEditingProduct({ ...editingProduct, checkoutUrl: e.target.value })
+              }
+            />
+          </div>
+
                 <div className="grid gap-2">
                   <Label htmlFor="category">Kategori</Label>
                   <Input id="category" name="category" defaultValue={defaultValues.category} required />
