@@ -12,8 +12,11 @@ const Products = () => {
   const { products } = useProducts();
   const { content } = useLandingPageContent();
 
-  const handleBuyClick = (productName) => {
-    toast({
+  const handleBuyClick = (product) => {
+    if (product.checkoutUrl) {
+      window.location.href = product.checkoutUrl;
+    } else {
+      toast({
       title: "🚧 Fitur ini belum diimplementasikan",
       description: `Tombol beli untuk "${productName}" belum berfungsi. Anda bisa memintanya di prompt berikutnya! 🚀`,
       duration: 4000,
@@ -102,7 +105,7 @@ const Products = () => {
                 </div>
                 
                 <Button 
-                  onClick={() => handleBuyClick(product.name)}
+                  onClick={() => handleBuyClick(product)}
                   className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                 >
                   <ShoppingCart className="w-4 h-4 mr-2" />
