@@ -10,8 +10,9 @@ const Hero = () => {
   const { toast } = useToast();
   const { content } = useLandingPageContent();
 
-  const handleBuyClick = (action) => {
-    toast({
+  const handleBuyClick = () => {
+    window.location.href = "https://sisworo-74397.myr.id/checkout/rak-minimarket-65348";
+  // toast({
       title: "🚧 Fitur ini belum diimplementasikan",
       description: `Aksi "${action}" belum berfungsi. Anda bisa memintanya di prompt berikutnya! 🚀`,
       duration: 4000,
