@@ -243,6 +243,19 @@ const ProductManagement = () => {
               onChange={(e) =>
                 setEditingProduct({ ...editingProduct, checkoutUrl: e.target.value })
               }
+              placeholder="https://..."
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="checkoutUrl">Checkout URL</Label>
+            <Input
+              id="checkoutUrl"
+              type="text"
+              value={editingProduct?.checkoutUrl || ""}
+              onChange={(e) =>
+                setEditingProduct({ ...editingProduct, checkoutUrl: e.target.value })
+              }
             />
           </div>
 
