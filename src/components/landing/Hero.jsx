@@ -12,11 +12,6 @@ const Hero = () => {
 
   const handleBuyClick = () => {
     window.location.href = "https://sisworo-74397.myr.id/checkout/rak-minimarket-65348";
-  // toast({
-      title: "🚧 Fitur ini belum diimplementasikan",
-      description: `Aksi "${action}" belum berfungsi. Anda bisa memintanya di prompt berikutnya! 🚀`,
-      duration: 4000,
-    });
   };
 
   return (
@@ -39,7 +34,7 @@ const Hero = () => {
                 {content.heroSubtitle}
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
@@ -51,7 +46,7 @@ const Hero = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button 
-                onClick={() => handleBuyClick("Hubungi Kami")}
+                onClick={handleBuyClick}
                 variant="outline"
                 size="lg"
                 className="border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-green-900 font-semibold px-8 py-4 rounded-xl transition-all duration-300 text-lg"
